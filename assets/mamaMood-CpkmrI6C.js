@@ -1,0 +1,1 @@
+const e="nanny-bunny:mama-mood-changed",t=a=>`nanny-bunny:mood-diary:${a||"guest"}`,o=a=>{try{return JSON.parse(localStorage.getItem(t(a))||"")}catch{return{}}},s=(a,n)=>{localStorage.setItem(t(a),JSON.stringify(n)),window.dispatchEvent(new CustomEvent(e,{detail:{userId:a||null}}))};export{e as M,o as r,s};
